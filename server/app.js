@@ -4,6 +4,9 @@ const graphqlHTTP = require("express-graphql");
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
 const PORT = 4000;
+const cors = require("cors");
+
+app.use(cors())
 
 mongoose.connect('mongodb+srv://treddshort:Thomy522!!@cluster0-ptrro.mongodb.net/test?retryWrites=true');
 mongoose.connection.once('open', () => {
